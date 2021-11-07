@@ -1,7 +1,7 @@
 public class PercolationUF implements IPercolate {
-    public boolean[][] myGrid;
-    public int myOpenCount;
-    public IUnionFind myFinder;
+    private boolean[][] myGrid;
+    private int myOpenCount;
+    private IUnionFind myFinder;
     private final int VTOP;
     private final int VBOTTOM;
 
@@ -14,11 +14,11 @@ public class PercolationUF implements IPercolate {
         myFinder.initialize(size*size+2);
     }
 
-    public int Index(int row, int col, int size){
+    private int Index(int row, int col, int size){
         return row*size + col;
     }
 
-    protected Boolean inBounds(int row, int col) {
+    private Boolean inBounds(int row, int col) {
         if (col < 0 || col >= myGrid[0].length) {
             return false;
         }

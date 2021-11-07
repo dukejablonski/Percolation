@@ -8,7 +8,7 @@ public class PercolationDFSFast extends PercolationDFS {
 
 
     @Override
-    public void updateOnOpen(int row, int col){
+    protected void updateOnOpen(int row, int col){
         int n = 0;
         if(row == 0){
             n = 1;
